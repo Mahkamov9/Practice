@@ -17,11 +17,15 @@ const UserData = () =>{
     
     return(
         <>
-            <ul>
-                <li></li>
-            </ul>
+            {users.map( (users , i)  => (
+                <div key={i} className='card'>
+                    <p>Name: {users.name}</p>
+                    <p>Username:{users.username}</p>
+                    <p>Email: {users.email}</p>
+                    <p>Adress: {users.address.street} Zipcode:{users.address.zipcode}</p>
 
-
+                </div>    
+            ))}
         </>
     )
 }
